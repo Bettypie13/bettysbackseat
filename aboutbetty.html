@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/d11c4b718a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>
             body {
                 background-color: rgb(236, 236, 230);
@@ -99,6 +101,7 @@
                 background-color: lightgray;
                 font-weight: bold;
                 text-align: center;
+                color: rgb(94, 78, 78);
             }
 
             .expandable:hover {
@@ -115,16 +118,29 @@
                 overflow: auto;
                 word-wrap: break-word;
             }
+            .content p{
+               font-size: 15px;
+            }
+            .button {
+                font-size: 14px;
+                background-color: aliceblue;
+                color: rgb(94, 78, 78);
+                
+                border: 0.5px solid rgb(94, 78, 78); /* Fixed border */
+                margin: 10px; /* Adds space around the button */
+            }
+
         </style>
     </head>
     <body>
         <table>
             <tr>
                 <th class="namecell"><a href="https://people.tamu.edu/~brooklyndixon">betty's backseat</a></th>
-                <th><a href="https://people.tamu.edu/~brooklyndixon/aboutbetty" target="_blank">about me</a></th>
-                <th><a href="https://people.tamu.edu/~brooklyndixon/academics" target="_blank">academic</a></th>
-                <th><a href="https://people.tamu.edu/~brooklyndixon/miscellaneous" target="_blank">misc.</a></th>
+                <th><a href="https://people.tamu.edu/~brooklyndixon/aboutbetty">about me</a></th>
+                <th><a href="https://people.tamu.edu/~brooklyndixon/academics">academic</a></th>
+                <th><a href="https://people.tamu.edu/~brooklyndixon/miscellaneous">misc.</a></th>
             </tr>
+            
         </table>
 
         <!-- Wrapper to keep image and right section side by side -->
@@ -140,10 +156,32 @@
                 </div>
 
                 <!-- Accordion Section -->
-                <div class="accordion">
-                    <div class="expandable">Section 1</div>
+                   <div class="accordion">
+                   <div class="expandable">Attributes</div>
                     <div class="content">
-                        <p>This is the content for Section 1.</p>
+                        <p>-Brooklyn (Betty) Dixon</p>
+                        <p>-21 years</p>
+                        <p>-Statistics M.S. in training</p>
+                    </div>
+                    
+                    <div class="expandable">Interests</div>
+                    <div class="content">
+                        <p></p>
+                        <a href="https://people.tamu.edu/~brooklyndixon/" class="button">
+                            Quantum Mechanics <i class='fas fa-carrot'></i>
+                        </a>
+                        
+                        <a href="https://www.leagueoflegends.com/" class="button">
+                            League of Legends "Jinx" <i class="fa-solid fa-puzzle-piece"></i>
+                        </a>
+
+                        <a href="https://example.com/wheat" class="button">
+                            Environmental Ethics <i class="fa-solid fa-wheat-awn"></i>
+                        </a>
+
+                        <a href="https://example.com/cubes" class="button">
+                            Marine Biology<i class="fa-solid fa-cubes"></i>
+                        </a>
                     </div>
 
                     <div class="expandable">Section 2</div>
@@ -151,10 +189,7 @@
                         <p>This is the content for Section 2.</p>
                     </div>
 
-                    <div class="expandable">Section 3</div>
-                    <div class="content">
-                        <p>This is the content for Section 3.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -170,6 +205,9 @@
                     }
                 });
             });
+        </script>
+        <script>
+
         </script>
     </body>
 </html>
