@@ -5,12 +5,23 @@
         <script src="https://kit.fontawesome.com/d11c4b718a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>
-            body {
-                background-color: rgb(236, 236, 230);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
+           body {
+    background-color: rgb(236, 236, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: url('woodstock1.cur'), auto; /* Default cursor */
+}
+
+        /* Override pointer cursor for clickable elements */
+        a, .expandable, .button, .button-music, .below-container, .extrabox, .top-container {
+            cursor: url('woodstock1.cur'), auto; /* Custom cursor on hover */
+        }
+
+        a:hover, .expandable:hover, .button:hover, .button-music:hover, .below-container:hover, .extrabox:hover, .top-container:hover {
+            cursor: url('woodstock1.cur'), auto; /* Ensure custom cursor when hovering */
+        }
+
             table, th, td {
                 border: 0.5px solid;
                 background-color: aliceblue;
@@ -37,7 +48,7 @@
                 color: rgb(172, 181, 184);
             }
 
-            /* Flexbox wrapper to align containers side by side */
+            
             .wrapper {
                 display: flex; 
                 justify-content: center; 
@@ -62,15 +73,37 @@
                 max-width: 100%;
                 max-height: 100%;
             }
+            .below-container{
+                width: 250px;  
+                height: 150px;
+                border: 0.5px solid rgb(94, 78, 78);
+                background-color: aliceblue;
+                padding: 10px;
+                font-size: 15px;
+                line-height: 1.6;
+                color: rgb(94, 78, 78);
+                text-align: center;
+                font-weight: bold;
+                margin: 15px;
+            }
+            .below-container:hover{
+                color: rgb(172, 181, 184);
+
+            }
+            .below-container img{
+                height: 100px;
+                width: 100px;
+                
+            }
            
-            /* Right-side section containing the divider and accordion */
+            
             .right-section {
                 display: flex;
                 flex-direction: column;
-                gap: 15px; /* Space between top container and accordion */
+                gap: 15px; 
             }
 
-            /* Top container (divider above accordion) */
+           
             .top-container {
                 width: 430px;  
                 height: 150px;
@@ -86,13 +119,29 @@
                 text-align: center;
                 font-weight: bold;
             }
+            .extrabox{
+                width: 430px;  
+                height: 150px;
+                border: 0.5px solid rgb(94, 78, 78);
+                background-color: aliceblue;
+                padding: 10px;
+                font-size: 15px;
+                line-height: 1.6;
+                color: rgb(94, 78, 78);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-weight: bold;
+            }
 
-            /* Accordion Style Containers */
+            
             .accordion {
                 width: 450px;  
                 border: 0.5px solid rgb(94, 78, 78);
                 background-color: aliceblue;
             }
+           
 
             .expandable {
                 cursor: pointer;
@@ -109,7 +158,7 @@
             }
 
             .content {
-                display: none; /* Hidden by default */
+                display: none; 
                 padding: 10px;
                 background-color: white;
                 font-size: 15px;
@@ -125,10 +174,18 @@
                 font-size: 14px;
                 background-color: aliceblue;
                 color: rgb(94, 78, 78);
-                
-                border: 0.5px solid rgb(94, 78, 78); /* Fixed border */
-                margin: 10px; /* Adds space around the button */
+                border: 0.5px solid rgb(94, 78, 78); 
+                margin: 10px; 
             }
+            .button-music{
+                font-size: 14px;
+                background-color: aliceblue;
+                color: rgb(94, 78, 78);
+                height: 20px;
+                width: 20px;  
+                margin: 10px; 
+            }
+             
 
         </style>
     </head>
@@ -143,57 +200,75 @@
             
         </table>
 
-        <!-- Wrapper to keep image and right section side by side -->
+        
         <div class="wrapper">
-            <div class="container">
-                <img src="bettypic.png" alt="Betty's Picture">
+            <!-- Left Section: Image + New Container -->
+            <div class="left-section">
+                <div class="container">
+                    <img src="bettypic.png" alt="Betty's Picture">
+                </div>
+                <div class="below-container">
+                    gallery
+                    <div class="below-container img">
+                    <img src="bettypic.png" alt="Betty's Picture">
+                    <img src="bettypic.png" alt="Betty's Picture">
+                   </div>
+                </div>
             </div>
-
-            <!-- Right Section containing the new divider and accordion -->
+        
+           
             <div class="right-section">
                 <div class="top-container">
-                    This is the divider above the accordion.
+                    "Do not go where the path may lead, go instead where there is no path and leave a trail." – Ralph Waldo Emerson
                 </div>
-
-                <!-- Accordion Section -->
-                   <div class="accordion">
-                   <div class="expandable">Attributes</div>
+        
+                <div class="accordion">
+                    <div class="expandable">Attributes</div>
                     <div class="content">
-                        <p>-Brooklyn (Betty) Dixon</p>
-                        <p>-21 years</p>
-                        <p>-Statistics M.S. in training</p>
+                        <p>- Brooklyn (Betty) Dixon</p>
+                        <p>- 21 years</p>
+                        <p>- Statistics M.S. in training</p>
                     </div>
-                    
+                
+        
                     <div class="expandable">Interests</div>
                     <div class="content">
-                        <p></p>
-                        <a href="https://people.tamu.edu/~brooklyndixon/" class="button">
+                        <a href="https://en.wikipedia.org/wiki/You_Are_the_Universe_(book)" class="button">
                             Quantum Mechanics <i class='fas fa-carrot'></i>
                         </a>
-                        
                         <a href="https://www.leagueoflegends.com/" class="button">
                             League of Legends "Jinx" <i class="fa-solid fa-puzzle-piece"></i>
                         </a>
-
-                        <a href="https://example.com/wheat" class="button">
+                        <a href="https://www.aldoleopold.org/about/the-land-ethic" class="button">
                             Environmental Ethics <i class="fa-solid fa-wheat-awn"></i>
                         </a>
-
-                        <a href="https://example.com/cubes" class="button">
+                        <a href="https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.1021170/full" class="button">
                             Marine Biology<i class="fa-solid fa-cubes"></i>
                         </a>
                     </div>
-
-                    <div class="expandable">Section 2</div>
+                
+                    <div class="expandable"> Diktat </div>
                     <div class="content">
-                        <p>This is the content for Section 2.</p>
+                        <p>★ it's okay to embarrass yourself doing good things. </p>
                     </div>
-
-                    
+                
                 </div>
+                <div class="extrabox">
+                    <div id="musicPlayer" style="display: none; text-align: center;">
+                        <p id="songTitle" style="font-weight: bold; margin: 5px;"></p>
+                        <audio id="audioPlayer" controls></audio>
+                    </div>
+                
+                    <button class="button-music" data-src="americans.mp3.mp3" data-title="I'm Afraid of Americans">♪</button>
+                    <button class="button-music" data-src="corporeal.mp3.mp3" data-title="Corporeal">♪</button>
+                    <button class="button-music" data-src="cua.mp3.mp3" data-title="See You Again">♪</button>
+                    <button class="button-music" data-src="cigarettesdaydreams.mp3.mp3" data-title="Cigarettes Daydreams">♪</button>
+                    <button class="button-music" data-src="over.mp3.mp3" data-title="Don't Dream It's Over">♪</button>
+                </div>
+                
             </div>
         </div>
-
+        
         <script>
             document.querySelectorAll('.expandable').forEach(item => {
                 item.addEventListener('click', function() {
@@ -207,7 +282,31 @@
             });
         </script>
         <script>
+             const musicPlayer = document.getElementById('musicPlayer');
+    const audioPlayer = document.getElementById('audioPlayer');
+    const songTitle = document.getElementById('songTitle');
 
+    document.querySelectorAll('.button-music').forEach(button => {
+        button.addEventListener('click', function () {
+            let songSrc = this.getAttribute('data-src');
+            let title = this.getAttribute('data-title');
+
+            if (audioPlayer.src.includes(songSrc) && !audioPlayer.paused) {
+                audioPlayer.pause();
+            } else {
+                audioPlayer.src = songSrc;
+                audioPlayer.play();
+                songTitle.textContent = title;
+                musicPlayer.style.display = "block"; 
+            }
+        });
+    });
+
+    audioPlayer.addEventListener('pause', function () {
+        if (audioPlayer.currentTime === 0) {
+            musicPlayer.style.display = "none"; 
+        }
+    });
         </script>
     </body>
 </html>
